@@ -46,7 +46,7 @@ class CreateIKRInstallation extends CreateRecord
                 'created_by' => auth()->id()
             ]);
 
-            if(!empty($data['fat_code']) && $data['fat_code'] != ''){
+            if(!empty($data['serial_number']) && $data['serial_number'] != ''){
                 DB::table('ikr_installation_onts')->insert([
                     'ikr_installation_id' => $ikr_installation_id,
                     'fat_code' => $data['fat_code'],
